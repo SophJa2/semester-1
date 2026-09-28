@@ -1,2 +1,6 @@
-# semester-1
-Week by week content for semester of COMP1850: lecture notes, in-class tasks, worksheets
+# about Sophia
+## Hello
+i am from manchester:
+
+* bolton
+> hello
