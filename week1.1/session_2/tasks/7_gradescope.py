@@ -9,10 +9,11 @@ try:
     num2 = int(input("Enter num2"))
 except:
     print("That is not a number")
+    valid = False
 
 if valid == True:
     total = num1 * num2
-    print("total")
+    print(total)
 # multiply those numbers together
 
 # print out the result
