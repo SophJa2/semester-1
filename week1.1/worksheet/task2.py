@@ -11,10 +11,14 @@ print(f"Welcome to LeedsBank's savings calculator {name}!")
 # Validate that they have entered an integer.
 Valid = True
 try:
-    MonthlySaved = int(input("Enter he amount of money you will save every month"))
+    MonthlySaved = int(input("Enter he amount of money you will save every month: "))
 except TypeError:
-    print("Invalid")
+    print("Invalid amount")
     Valid = False
+except ValueError:
+    print("Invalid amount")
+    Valid = False
+ 
 
 # Calculate the total amount of money they will have saved by the end of the year (amount per month multiplied by 12).
 # print this out for the user with a suitable message.
@@ -27,4 +31,5 @@ if Valid == True:
     # print this out in the format £X.XX (to two decimal places).
 
     TotalAmount = YearlySaved + YearlySaved*0.8
-    print(f"£{round(TotalAmount,2)}")
+    TotalAmount = round(TotalAmount,2)
+    

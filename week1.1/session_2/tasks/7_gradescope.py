@@ -3,7 +3,16 @@
 # You are going to write a very simple program:
 
 # Ask a user to enter two numbers (one per input)
+valid = True
+try:
+    num1 = int(input("Enter num1:"))
+    num2 = int(input("Enter num2"))
+except:
+    print("That is not a number")
 
+if valid == True:
+    total = num1 * num2
+    print("total")
 # multiply those numbers together
 
 # print out the result
