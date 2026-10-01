@@ -31,5 +31,5 @@ if Valid == True:
     # print this out in the format £X.XX (to two decimal places).
 
     TotalAmount = YearlySaved + YearlySaved*0.8
-    TotalAmount = round(TotalAmount,2)
+    print(f"{TotalAmount:.2f}")
     
