@@ -30,6 +30,6 @@ if Valid == True:
     # Calculate the total amount of money including interest (0.8% of the final annual amount) they will have saved in a year.
     # print this out in the format £X.XX (to two decimal places).
 
-    TotalAmount = YearlySaved + YearlySaved*0.8
+    TotalAmount = YearlySaved + YearlySaved*0.008
     print(f"{TotalAmount:.2f}")
     
