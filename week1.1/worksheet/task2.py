@@ -8,7 +8,7 @@ name = input("What is your name? ")
 print(f"Welcome to LeedsBank's savings calculator {name}!")
 
 # Ask the user to input an amount they want to save every month - this should be an integer.
-# Validate that they have entered an integer.
+# Validate that they have entered an integer
 Valid = True
 try:
     MonthlySaved = int(input("Enter he amount of money you will save every month: "))
