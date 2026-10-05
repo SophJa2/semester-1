@@ -1,7 +1,10 @@
 # Week 1.2, Session 1: Task 4
 
-fruit = {"apple", "orange", "tomato"}
-vegetables = {"leek", "tomato", "potato"}
+fruit = {"apple", "orange", "tomato"} ##sets bc they use {}
+vegetables = {"leek", "tomato", "potato"} ##set
+
+##coverting from set to list 
+#food = list(set(fruit))
 
 # What do you think will be printed here?
 
@@ -18,3 +21,5 @@ print(food)
 # Remove an item from vegetables
 
 # Find and display symmetric difference of the two sets
+sysDiff = fruit.symmetric_difference(vegetables)
+print(sysDiff)
