@@ -1,12 +1,8 @@
 # Worksheet 1.2: Task 2 Solution
 
-count = int(input("Enter the amount of values yo want to enter"))
-numbers = []
+from util import read_numbers
 
-for i in range(count):
-    try:
-        num = float(input("Enter a number: "))
-    except NonZeroError:
-        sys.exit("no numbers provided")
-    numbers.append(num)
+count = int(input("Enter the number of float numbers in the sequence "))
 
+numbers = read_numbers()
+print(numbers)
