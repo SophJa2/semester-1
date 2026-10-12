@@ -3,7 +3,10 @@
 fruit = ['apple','pear','banana','orange']
 
 while fruit:
-	print(fruit.pop())
+	if len(fruit) != 0:
+		print(fruit.pop())
+	else:
+		print("This list is now empty")
 
 
 # Add an else clause with a message that the list is now empty
