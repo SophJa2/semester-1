@@ -16,4 +16,4 @@ else:
 print(f"Minimum = {min(numbers)}")
 print(f"Maximum = {max(numbers)}")
 print(f"Mean = {sum(numbers)/len(numbers)}")
-print(f"Medium = {median}")
+print(f"Median = {median}")
