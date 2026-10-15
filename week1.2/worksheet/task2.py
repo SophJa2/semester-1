@@ -6,7 +6,9 @@ from util import read_numbers
 numbers = read_numbers()
 
 if len(numbers) == 0:
-    sys.exit("no numbers provided")
+    sys.exit("Error: no numbers provided")
+
+numbers.sort()
 
 if len(numbers) % 2 == 0:
     median = numbers[(len(numbers)//2)-1] + (numbers[(len(numbers)//2)] - numbers[(len(numbers)//2 - 1)])/2
