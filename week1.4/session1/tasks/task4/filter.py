@@ -7,14 +7,12 @@
 
 
 def filter_positive_numbers(numbers):
-    """
-    Filters out positive numbers from the list, keeping only the negative ones.
-    The function returns a list of all the positive numbers in the input.
+    posInts = [num for num in numbers if num > 0]
+    return posInts
 
-    Args:
-        numbers (list of int): A list of integers.
-
-    Returns:
-        list of int: A list containing only the positive integers.
-    """
-    return [num for num in numbers if num > 0]
+nums = []
+num = int(input())
+while num != "":
+    nums.append(num)
+    num = int(input()
+filter_positive_numbers(nums)

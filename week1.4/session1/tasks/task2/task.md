@@ -1,10 +1,18 @@
 
 # set.intersection() method
 
-Look up documentation on the 'intersection()' method
-- how is the method described?  
-- what are the inputs?
-- what is the output?
-- think about the description of the data and also the type
+#Look up documentation on the 'intersection()' method
+#- how is the method described?  
+#- what are the inputs?
+#- what is the output?
+#- think about the description of the data and also the type
 
-Write a small program to test the method
+#Write a small program to test the method
+
+def intersect(a,b):
+    intersection = a & b
+    print(intersection)
+
+a = {1,9,5}
+b = {3,5,7}
+intersect(a,b)
