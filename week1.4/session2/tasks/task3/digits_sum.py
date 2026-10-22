@@ -22,6 +22,7 @@ def digits_sum(number):
     
     # recursive case
 
+    
 
 # check if correct output is produced
 print(digits_sum(987))  # Output: 24

@@ -21,7 +21,7 @@ def currency_converter(amount, from_currency, to_currency):
     
     
 
-    return None
+    return 
 
 # Submit only this file currency_converter.py with the completed function.
 
