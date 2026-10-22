@@ -5,27 +5,26 @@ Name: Sophia Jacob
 """
 
 states = { "red":4, "red_amber":3, "green":5, "amber":3 }
+StateColour = list(states.keys())
+values = list(states.values())
 
 systime = 0
 maxtime = int(input("Max time : "))  # read an integer number of steps (>0)
-time = 0
+ColourIndex = 0
+ColourCounter = 0
 
-while time != (maxtime + 1):
-    if time < 4:
-        state = "red"
-    elif time < 7:
-        state = "red_amber"
-    elif time < 12:
-        state = "green"
+while systime < maxtime+1:
+    if ColourCounter < values[ColourIndex]-1:
+        state = StateColour[ColourIndex]
+        ColourCounter +=1
     else:
-        state = "amber"
+        ColourIndex += 1
+        ColourCounter = 0
+    if ColourIndex == 4:
+        ColourIndex = 0
 
     print(f"Time {systime:03} State {state}")
     systime += 1
-    time += 1
-    if time == 15:
-        time = 0
-        maxtime -= 15
 
 # Simulate the traffic light system up to time=maxtime in 1-second steps
 
