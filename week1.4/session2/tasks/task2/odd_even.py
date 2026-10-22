@@ -16,6 +16,7 @@ def odd_even(lstIntegers):
     Returns:
         list: A list containing [odd_count, even_count].
     """
+    
 
     # Complete your code here
 

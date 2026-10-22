@@ -6,16 +6,32 @@ def most_frequent_string(votes):
     (highest count) in the votes argument and returns it along with the count
     of its occurrences. It assumes there is a single most frequent string
     (i.e., no ties for the highest count)
-
-    Args:
-        votes (list): A list of strings representng votes,
-        e.g. ['apples', 'bananas', 'grapes', 'tomatoes']
-
     Returns:
         - tuple: (str, int) where str is the string with the highest count,
         and int is the count of its occurences
         - None, None: if votes is empty.
     """
+    
+    Highest = None
+    if len(votes) == 0:
+        MaxCount = None
+        HighestVote = (Highest,MaxCount)
+        return HighestVote
+    else:
+        votes.sort()
+        maxCount = 0
+        Count = 0
+        for vote in range(len(votes)-1):
+            if votes[vote] == votes[vote+1]:
+                Count += 1
+            else:
+                if Count+1 > maxCount:
+                    maxCount = Count + 1
+                    Highest = votes[vote-1]
+                Count = 0
+
+        HighestVote = (Highest,maxCount)
+        return HighestVote
 
     # Your task is to complete the body of the function based on the details in the docstring.
     # Hint 1: You can complete this task with for loops or comprehensions 
