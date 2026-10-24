@@ -18,18 +18,11 @@ def currency_converter(amount, from_currency, to_currency):
         'INR': {'PHP': 0.69, 'CNY': 0.09, 'GBP': 0.01}
     }
 
-    
-    
+    conversion = conversion_rate[from_currency][to_currency]
+    newAmount = conversion * amount
 
-    return 
+    return None
 
 # Submit only this file currency_converter.py with the completed function.
 
 # Remove any additional code you may have added during development and testing.
-amount = input("Amount: ")
-if amount < 0:
-    amount = 0.0
-
-Currency = input("Current Currency: ")
-NewCurrency = input("Conversion to: ")
-print(conversion_rate(amount,Currency,NewCurrency))
