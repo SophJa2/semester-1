@@ -20,11 +20,10 @@ def currency_converter(amount, from_currency, to_currency):
 
     conversion = conversion_rate[from_currency][to_currency]
     newAmount = conversion * amount
-    newAmount = str(newAmount) +" " + to_currency
     
     if amount == 0 or amount < 0:
         newAmount = 0.0
-        
+
     return (newAmount)
 
 # Submit only this file currency_converter.py with the completed function.
