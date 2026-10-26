@@ -15,7 +15,6 @@ It should raise a `TypeError` exception if either parameter is not of type
 than or equal to 0.
 
 ### Other Methods
-
 Implement the following methods:
 
 - `is_square()`, which should return `True` if the rectangle is actually
