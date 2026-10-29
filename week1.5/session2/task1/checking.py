@@ -16,6 +16,9 @@ class Point:
         """
         self.x = x
         self.y = y
+        if type(y) != int or type(x) != int:
+            raise TypeError("X and Y should be integers")
+
 
     def distance(self):
         """
