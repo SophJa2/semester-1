@@ -24,6 +24,12 @@ class Person:
         """
         This method creates the initialized name for the person
         """
+        self.initials = self.name[0]
+        for i in range(len(self.name)-1):
+            if self.name[i] == " ":
+                self.initials = self.initials + self.name[i+1]
+
+        return self.initials
 
     def is_birthday(self):
         """
@@ -33,5 +39,3 @@ class Person:
             return True
         else:
             return False
-
-print(date.today())
