@@ -53,3 +53,5 @@ class Point:
             raise TypeError("argument must be a Point")
 
         return math.hypot(self.x - other.x, self.y - other.y)
+
+    

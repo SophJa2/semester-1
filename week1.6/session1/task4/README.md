@@ -8,7 +8,7 @@ Import the `datetime` class from Python' standard library and create a
 `datetime` object repreenting the time right now:
 
     from datetime import datetime
-    now = datetime.now()
+    now = datetim.now()
 
 Then import the `Quake` class and attempt to create an object:
 
