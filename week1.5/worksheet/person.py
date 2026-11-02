@@ -24,10 +24,10 @@ class Person:
         """
         This method creates the initialized name for the person
         """
-        self.initials = self.name[0]
+        self.initials = (self.name[0]).upper()
         for i in range(len(self.name)-1):
             if self.name[i] == " ":
-                self.initials = self.initials + self.name[i+1]
+                self.initials = self.initials + (self.name[i+1]).upper()
 
         return self.initials
 
