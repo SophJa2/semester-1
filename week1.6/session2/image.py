@@ -60,7 +60,10 @@ class Image:
         self.width = width
         self.height = height
         self.max_value = maximum
-        self.pixels = [value] * (width * height)
+        self.pixels = [value] * (width * height) #this creates a list of how many duplicates * by value
+        # eg [0] * 10 results in [0,0,0,0,0,0,0,0,0]
+        # [[0]*2]*3 results in [[0,0],[0,0],[0,0]]
+
 
     def read_pgm(self, filename):
         """
@@ -90,7 +93,7 @@ class Image:
 
     def _parse_max_value(self, imgfile):
         line = imgfile.readline().strip()
-        self.max_value = int(line)
+        self.max_value = int(line) #the value of the pixel doesnt conflict with max value specified
 
     def _parse_pixels(self, imgfile):
         self.pixels = [int(value) for value in imgfile.read().split()]
@@ -131,7 +134,7 @@ class Image:
         """
         Returns a new Image that is a copy of this Image.
         """
-        return copy.deepcopy(self)
+        return copy.deepcopy(self) #using method deepcopy from class copy changes made wont effect og image
 
     def write_pgm(self, filename):
         """

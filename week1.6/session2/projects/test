@@ -1,0 +1,4 @@
+from image import Image
+
+image = Image()
+image.read_pgm("test.pgm")
