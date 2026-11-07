@@ -110,20 +110,15 @@ class Image:
             temp = [int(value) for value in line]
             self.pixels.append(temp)
 
-
         length = 0
         for line in self.pixels:
             length += len(line)
-        
 
-        #self.pixels = [int(value) for value in imgfile.read().split()]
+            if any(p < 0 or p > self.max_value for p in line):
+                       raise ImageError(f"pixel value outside allowed range (0 to {self.max_value})")
         
         if length != self.width * self.height:        
             raise ImageError("number of pixels doesn't match image dimensions")
-
-        if any(p < 0 or p > self.max_value for p in line):
-           raise ImageError(f"pixel value outside allowed range (0 to {self.max_value})")
-
 
     def get(self, row, col):
         """
