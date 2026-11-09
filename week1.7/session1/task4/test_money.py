@@ -33,7 +33,7 @@ def test_invalid_type_pence():
 
 def test_invalid_value_pence():
      with pytest.raises(ValueError) as excinfo:
-             Money(0,-1)
+             Money(0,100)
      assert str(excinfo.value) == "pence must be >= 0"
      
     # complete the test implementation for 
