@@ -17,11 +17,13 @@ def calculate_average(scores):
     
     # add debug logging here
     
-    average = total_score // total_assignments
+    average = total_score / total_assignments 
+    # used // which is integer division
+    
     
     # add a debug logging here
     
-    return round(average,2)
+    return f"{average:.2f}"
 
 print(calculate_average([85, 90, 88]))
 # Expected Output: 87.67
