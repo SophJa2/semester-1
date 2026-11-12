@@ -37,10 +37,8 @@ class Money:
         """
         Adds this Money to another Money, returning the total.
         """
-        # Add code here to check that parameter 'other' is a Money object,
-        # add self to other, then return the sum as a new Money object
-        # (see README for hints and tips)
-        if not isinstance(other, Money):
+        if not isinstance(other, Money): #checks whether other is a money object
+            #isinstance can be used to check if its an object
             raise ValueError("the addition should include an int")
 
 
