@@ -16,14 +16,16 @@ def calculate_average(scores):
     total_assignments = len(scores)
     
     # add debug logging here
+    logger.debug(f"{total_score} divided by {total_assignments}")
     
     average = total_score / total_assignments 
     # used // which is integer division
     
     
     # add a debug logging here
-    
-    return f"{average:.2f}"
+    logger.debug(f"average {average}")
+
+    return round(average,2)
 
 print(calculate_average([85, 90, 88]))
 # Expected Output: 87.67

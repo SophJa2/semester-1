@@ -3,10 +3,10 @@
 # Run this program and observe what happens
 
 def assign_values(x):
-    for i in range(10):
+    for i in range(100):
         x[i] = (i + 1) * 2;
 
 if __name__ == "__main__":
-    data = [0] * 10
+    data = [0] * 100
     assign_values(data)
     print("Done!")
