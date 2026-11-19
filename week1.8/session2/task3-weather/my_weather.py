@@ -3,7 +3,7 @@ import httpx
 import pandas as pd
 import matplotlib.pyplot as plt
 
-api_key="U6KXJTZC2E8VGH39PD7UMG4BZ"   # your API key
+api_key="4SMCGWB7KF577AYVGKUNT5ENE"   # your API key
 
 city="Leeds"     # city location
 country="UK"     # country location
@@ -23,6 +23,9 @@ response = httpx.get(url)
 print(response.status_code)
 
 # json data
+if response.status_code == 200:
+    data = response.json()
+
 data = response.json()
 
 # raw data output
@@ -39,11 +42,20 @@ df = pd.DataFrame(temp_data)
 
 # using matplotlib plot the 3 data sets: (tempmin,temp,tempmax) as line graphs
 
+df['tempmax']= (df['tempmax'] -32) * (5/9)
+df['tempmin']= (df['tempmin'] -32) * (5/9)
+df['temp']= (df['temp'] -32) * (5/9)
+
 df.plot()
 
+
+
+plt.ylabel("temperature")
+plt.xlabel("Day")
 plt.show()
 
 # annotate the graph with axis labels
+
 
 # note that temperature is in Farenheit (F)
 # convert to Celcius before plotting 

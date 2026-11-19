@@ -21,6 +21,7 @@ The `httpx.get(url)` method returns a `response` object that we can interrogate
 # Compare to command-line httpx
 
 What is the difference?
+the fetch_post.py outputs the same thing as before but it prints on one line
 
 # Extension
 
