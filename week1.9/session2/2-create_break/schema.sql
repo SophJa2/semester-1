@@ -65,3 +65,4 @@ CREATE TABLE reviews (
     comment    TEXT,                      -- optional, may be NULL
     FOREIGN KEY (order_id) REFERENCES orders(order_id)
 );
+
